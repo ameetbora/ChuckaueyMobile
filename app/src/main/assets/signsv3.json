@@ -1,0 +1,658 @@
+[
+  {
+    "signNO": "rs001",
+    "name": "Permanent speed sign",
+    "color1": "white",
+    "shape1": "circle",
+    "color2": "red",
+    "descrption": "Permanent 40 km/h speed limits"
+  },
+  {
+    "signNO": "rs002",
+    "name": "Area speed limit sign",
+    "color1": "white",
+    "shape1": "circle",
+    "color2": "red",
+    "descrption": "40 km/h speed limits in area"
+  },
+  {
+    "signNO": "rs003",
+    "name": "Time based speed sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Time based 40 km/h speed limits outside schools"
+  },
+  {
+    "signNO": "rs004",
+    "name": "Electronic speed sign",
+    "color1": "black",
+    "shape1": "circle",
+    "color2": "red",
+    "descrption": "Time based limits apply on roads"
+  },
+  {
+    "signNO": "rs005",
+    "name": "Shared zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Shared zones have 10km/h speed limit"
+  },
+  {
+    "signNO": "rs006",
+    "name": "Keep left sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Keep driving in left lane"
+  },
+  {
+    "signNO": "rs007",
+    "name": "Safety zone sign",
+    "color1": "black",
+    "shape1": "circle",
+    "color2": "yellow",
+    "descrption": "Here is a safety zone"
+  },
+  {
+    "signNO": "rs008",
+    "name": "Pedestrians crossing sign",
+    "color1": "yellow",
+    "shape1": "circle",
+    "color2": "black",
+    "descrption": "Pedestrians high likely crossing ahead, be careful"
+  },
+  {
+    "signNO": "rs009",
+    "name": "No left turn",
+    "color1": "white",
+    "shape1": "circle",
+    "color2": "red",
+    "descrption": "These type of signs showing which direction you must not take, in this example: you must not turn left"
+  },
+  {
+    "signNO": "rs010",
+    "name": "No entry sign",
+    "color1": "white",
+    "shape1": "circle",
+    "color2": "red",
+    "descrption": "These type of signs showing which direction you must not take, in this example: you must not go strightly"
+  },
+  {
+    "signNO": "rs011",
+    "name": "Left turn only sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "These type of signs showing which direction you must take, in this example: you must turn left"
+  },
+  {
+    "signNO": "rs012",
+    "name": "Stop sign",
+    "color1": "red",
+    "shape1": "octagon",
+    "color2": "red",
+    "descrption": "Driver must stop and give way in this intersection"
+  },
+  {
+    "signNO": "rs013",
+    "name": "Give way sign",
+    "color1": "white",
+    "shape1": "triangle",
+    "color2": "red",
+    "descrption": "Driver must stop and give way in this intersection"
+  },
+  {
+    "signNO": "rs014",
+    "name": "Hand-held stop sign",
+    "color1": "red",
+    "shape1": "circle",
+    "color2": "white",
+    "descrption": "Showing a information that dirver should be prepared to stop"
+  },
+  {
+    "signNO": "rs015",
+    "name": "Keep left unless overtaking sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Driver must not drive in right unless overtaking"
+  },
+  {
+    "signNO": "rs016",
+    "name": "Normal bending sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Bending sign tells you what to expected, this one is normal bending."
+  },
+  {
+    "signNO": "rs017",
+    "name": "Sharp bending sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Bending sign tells you what to expected,this one shows there will be a sharp bending"
+  },
+  {
+    "signNO": "rs018",
+    "name": "A winding section of road",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Bending sign tells you what to expected,a wingding arrow secetion ahead"
+  },
+  {
+    "signNO": "rs019",
+    "name": "Cross-road intersection",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is a cross road intersection ahead"
+  },
+  {
+    "signNO": "rs020",
+    "name": "T intersection",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is a T intersection ahead"
+  },
+  {
+    "signNO": "rs021",
+    "name": "Staggered side road junction",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is an staggered side road junction ahead"
+  },
+  {
+    "signNO": "rs022",
+    "name": "Traffic lights ahead",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is a traffic lights in intersection"
+  },
+  {
+    "signNO": "rs023",
+    "name": "Stop sign ahead",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is an stop sign ahead"
+  },
+  {
+    "signNO": "rs024",
+    "name": "Roundabout ahead",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is a roundabout ahead"
+  },
+  {
+    "signNO": "rs025",
+    "name": "End of divided road",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "The end of divided road ahead"
+  },
+  {
+    "signNO": "rs026",
+    "name": "Two lanes for oncoming traffic",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Two lanes for oncoming traffic"
+  },
+  {
+    "signNO": "rs027",
+    "name": "Advisory speed sign",
+    "color1": "yellow",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Advisory speed signs show maximum speed in good conditions"
+  },
+  {
+    "signNO": "rs028",
+    "name": "Hollow/dip in the road sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "There is hollow/dip ahead in the road"
+  },
+  {
+    "signNO": "rs029",
+    "name": "Gravel road sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Gravel road ahead"
+  },
+  {
+    "signNO": "rs030",
+    "name": "Slippery when wet sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Be careful, the road will be slippery when wet"
+  },
+  {
+    "signNO": "rs031",
+    "name": "Rail crossing ahead sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Rail crossing ahead"
+  },
+  {
+    "signNO": "rs032",
+    "name": "Uncontrolled crossing ahead sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Uncontrolled crossing ahead sign"
+  },
+  {
+    "signNO": "rs033",
+    "name": "Uncontrolled rail crossing on side road sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Uncontrolled rail crossing on side"
+  },
+  {
+    "signNO": "rs034",
+    "name": "Pedestrians crossing sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Pedestrians crossing ahead"
+  },
+  {
+    "signNO": "rs035",
+    "name": "Children crossing sign",
+    "color1": "yellow",
+    "shape1": "diamond",
+    "color2": "black",
+    "descrption": "Children crossing ahead"
+  },
+  {
+    "signNO": "rs036",
+    "name": "Left lane ends, prepare to merge sign",
+    "color1": "yellow",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Please prepare merge ahead"
+  },
+  {
+    "signNO": "rs037",
+    "name": "slow down and prepared to stop sign",
+    "color1": "red",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Please prepared to stop"
+  },
+  {
+    "signNO": "rs038",
+    "name": "Workers on the road ahead sign",
+    "color1": "orange",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Workers on the road ahead"
+  },
+  {
+    "signNO": "rs039",
+    "name": "You may proceed slowly sign",
+    "color1": "yellow",
+    "shape1": "circle",
+    "color2": "",
+    "descrption": "You may proceed slowly"
+  },
+  {
+    "signNO": "rs040",
+    "name": "Bicycle lane sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "For cyclists only. Parking is allowed unless there is a prohibited sign"
+  },
+  {
+    "signNO": "rs041",
+    "name": "Transit lane sign(T2)",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "During times specified,lane Is for carrying 2or more people"
+  },
+  {
+    "signNO": "rs042",
+    "name": "Transit lane sign(T3)",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "During times specified,lane Is for carrying 3or more people"
+  },
+  {
+    "signNO": "rs043",
+    "name": "Differing T-intersections",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Differing T-intersections"
+  },
+  {
+    "signNO": "rs044",
+    "name": "Hook Turn sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "In this intersection, turn right from the left lane to make a hook turn"
+  },
+  {
+    "signNO": "rs045",
+    "name": "No U-turn sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "If the sign is not at an intersection continue on until you reach an intersection before you make a U-turn."
+  },
+  {
+    "signNO": "rs046",
+    "name": "No Right Turn sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "No Right Turn sign unless there is a Uturn sign"
+  },
+  {
+    "signNO": "rs047",
+    "name": "Start Freeway sign",
+    "color1": "green",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "START FREEWA. Adjust your speed as you drive along the entry ramp to match that of the freeway traffic."
+  },
+  {
+    "signNO": "rs048",
+    "name": "Warragul exit 2 km sign",
+    "color1": "green",
+    "shape1": "rectangle",
+    "color2": "white",
+    "descrption": "Warragul exiting from freeway is 2 km far"
+  },
+  {
+    "signNO": "rs049",
+    "name": "Wrong way go back sign",
+    "color1": "red",
+    "shape1": "rectangle",
+    "color2": "white",
+    "descrption": "Wrong way go back, do not reverse on a freeway"
+  },
+  {
+    "signNO": "rs050",
+    "name": "Freeway number exit sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "green",
+    "descrption": "Some freeway exits will have an exit number sign which you can use to help navigate and map your route."
+  },
+  {
+    "signNO": "rs051",
+    "name": "Start tollway sign",
+    "color1": "blue",
+    "shape1": "rectangle",
+    "color2": "yellow",
+    "descrption": "You are entering a tolled section of road."
+  },
+  {
+    "signNO": "rs052",
+    "name": "Tollway entrance sign",
+    "color1": "blue",
+    "shape1": "rectangle",
+    "color2": "yellow",
+    "descrption": "You are about to enter the tollway from a non-trollway road"
+  },
+  {
+    "signNO": "rs053",
+    "name": "Children%uFFFD%uFFFDs crossing flag",
+    "color1": "orange",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Children crossing ahead"
+  },
+  {
+    "signNO": "rs054",
+    "name": "Tram lane sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Up to 50 meters driving in this tram lane"
+  },
+  {
+    "signNO": "rs055",
+    "name": "Tram lane with hours of operations sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Up to 50 meters driving in this tram lane in specified time"
+  },
+  {
+    "signNO": "rs056",
+    "name": "Tramway sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Leave as soon as possible"
+  },
+  {
+    "signNO": "rs057",
+    "name": "Bus lane sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "you may drive in a bus lane for up to 100 metres\nyou may drive in a bus lane for up to 100 metres if it is necessary: ? to enter or leave the road ? to overtake a vehicle that is turning right or making a U-turn from the centre of the road."
+  },
+  {
+    "signNO": "rs058",
+    "name": "Give Way to bus sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "green",
+    "descrption": "In a built-up area you must give way to a bus displaying a Give Way To Bus sign and signalling that it is about to pull out from the kerb into the left lane."
+  },
+  {
+    "signNO": "rs059",
+    "name": "Oversize sign",
+    "color1": "yellow",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Oversize vehicle warning advanced"
+  },
+  {
+    "signNO": "rs060",
+    "name": "Do not overtake turning vehicle sign 1",
+    "color1": "yellow",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You must not overtake alongside a turning truck."
+  },
+  {
+    "signNO": "rs061",
+    "name": "Do not overtake turning vehicle sign 2",
+    "color1": "yellow",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You must not overtake alongside a turning truck."
+  },
+  {
+    "signNO": "rs062",
+    "name": "Portable warning triangles",
+    "color1": "",
+    "shape1": "triangle",
+    "color2": "",
+    "descrption": "A warning, driver should slow down"
+  },
+  {
+    "signNO": "rs063",
+    "name": "Give way to stock signs",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Stock may move ahead, be careful"
+  },
+  {
+    "signNO": "rs064",
+    "name": "Stock crossing ahead warning sign",
+    "color1": "yellow",
+    "shape1": "rectangle",
+    "color2": "black",
+    "descrption": "Stock crossing ahead,slow down"
+  },
+  {
+    "signNO": "rs065",
+    "name": "Railway and tramway level crossings sign",
+    "color1": "red",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Drive slowly in a speed that you can stop necessarily when train or tram come"
+  },
+  {
+    "signNO": "rs066",
+    "name": "General parking signs1",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You can park 5minutes during the time, no restriction in other time"
+  },
+  {
+    "signNO": "rs067",
+    "name": "General parking signs2",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You can park 1 hour during the time, no restriction in other time"
+  },
+  {
+    "signNO": "rs068",
+    "name": "General parking signs3",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You can park 2 hours"
+  },
+  {
+    "signNO": "rs069",
+    "name": "Disabled Parking sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Disable only parking bay"
+  },
+  {
+    "signNO": "rs070",
+    "name": "No Parking signs1",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You are allowed two minutes in a%uFFFD%uFFFDNo Parking%uFFFD%uFFFD area only"
+  },
+  {
+    "signNO": "rs071",
+    "name": "No Parking signs2",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "You are allowed two minutes in a%uFFFD%uFFFDNo Parking%uFFFD%uFFFD area only"
+  },
+  {
+    "signNO": "rs072",
+    "name": "No Stopping sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "These signs tell you that you must not stop at the kerb for any reason."
+  },
+  {
+    "signNO": "rs073",
+    "name": "Clearway sign used at start of clearway",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "",
+    "descrption": "Clearways help traffic move faster during peak time"
+  },
+  {
+    "signNO": "rs074",
+    "name": "This sign is used within the clearway",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "green",
+    "descrption": "You must not stop here for NO reason during the hours and days"
+  },
+  {
+    "signNO": "rs075",
+    "name": "Loading Zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Unless another limit is specified on the sign, loading zone is only for vehicles recorded by VicRoads as goods-carrying vehicles to park(30minutes or shown on sign)"
+  },
+  {
+    "signNO": "rs076",
+    "name": "Truck Zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "A Truck Zone is only for trucks with a gross vehicle mass over 4.5 tonnes."
+  },
+  {
+    "signNO": "rs077",
+    "name": "Bus Zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Cannot park in bus zone, only for public buses"
+  },
+  {
+    "signNO": "rs078",
+    "name": "Permit Zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Only for vehicles displaying a valid permit for that zone issued by the relevant authority."
+  },
+  {
+    "signNO": "rs079",
+    "name": "Taxi Zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Only for taxi"
+  },
+  {
+    "signNO": "rs080",
+    "name": "Works Zone sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Only for vehicles engaged in construction work in or near the zone."
+  },
+  {
+    "signNO": "rs081",
+    "name": "Tow away sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Your vehicle will be towed away during specific time showed"
+  },
+  {
+    "signNO": "rs082",
+    "name": "Clearway and tow sign",
+    "color1": "white",
+    "shape1": "rectangle",
+    "color2": "red",
+    "descrption": "Your vehicle will be towed away if you park at this spot during the times specified"
+  }
+]

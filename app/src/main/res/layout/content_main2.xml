@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home6"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity2"
+    tools:showIn="@layout/activity_main2">
+
+    <ProgressBar
+        android:id="@+id/loadingRing3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#808bc34a"
+        android:drawableTop="@drawable/parking"
+        android:text="Can I park here?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#808bc34a"
+        android:drawableTop="@android:drawable/ic_menu_search"
+        android:text="What does this sign mean?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/holo_orange_light"
+        android:drawableTop="@android:drawable/ic_dialog_map"
+        android:text="Where can I park?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="333dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Nearby Unoccupied Parkings:"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="347dp"
+        android:layout_height="304dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.847">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_location5"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="#338a3e"
+                android:clickable="true"
+                android:drawableRight="@drawable/gmaps"
+                android:lineSpacingExtra="8sp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="228dp" />
+
+            <TextView
+                android:id="@+id/text_location6"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="#66bb6a"
+                android:drawableRight="@drawable/gmaps"
+                android:lineSpacingExtra="8sp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="319dp" />
+
+            <TextView
+                android:id="@+id/text_location7"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="#338a3e"
+                android:drawableRight="@drawable/gmaps"
+                android:lineSpacingExtra="8sp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="410dp" />
+
+            <TextView
+                android:id="@+id/text_location8"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="#66bb6a"
+                android:drawableRight="@drawable/gmaps"
+                android:lineSpacingExtra="8sp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="410dp" />
+
+            <TextView
+                android:id="@+id/text_location9"
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dp"
+                android:background="#338a3e"
+                android:drawableRight="@drawable/gmaps"
+                android:lineSpacingExtra="8sp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="17dp"
+                tools:layout_editor_absoluteY="410dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="191dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Free Only"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+</android.support.constraint.ConstraintLayout>

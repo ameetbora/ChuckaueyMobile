@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeActivity"
+    android:background="@drawable/home6"
+    tools:showIn="@layout/activity_home">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="333dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Welcome to Chuck a U-ey!\n\nSelect an option below to get started"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#808bc34a"
+        android:drawableTop="@drawable/parking"
+        android:text="Can I park here?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="#808bc34a"
+        android:drawableTop="@android:drawable/ic_menu_search"
+        android:text="What does this sign mean?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="115dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#808bc34a"
+        android:drawableTop="@android:drawable/ic_dialog_map"
+        android:text="Where can I park?"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

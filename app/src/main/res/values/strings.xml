@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Chuck A Uey!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">Chuck A Uey!</string>
+    <string name="title_activity_main">Can I Park Here?</string>
+    <string name="title_activity_main2">Where Can I Park?</string>
+    <string name="title_activity_main3">What Does This Sign Mean?</string>
+    <string name="title_activity_sign">Sign Details</string>
+    
+    <string-array name="select_color">
+        <item>What is the color of the sign?</item>
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Red</item>
+        <item>Black</item>
+        <item>Green</item>
+        <item>Orange</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="select_shape">
+        <item>What is the shape of the sign?</item>
+        <item>Circle</item>
+        <item>Rectangle</item>
+        <item>Diamond</item>
+        <item>Triangle</item>
+        <item>Octagon</item>
+    </string-array>
+
+</resources>
