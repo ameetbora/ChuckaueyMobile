@@ -137,6 +137,7 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:visibility="gone"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/text_location2"
         app:layout_constraintTop_toTopOf="parent" />
@@ -178,6 +179,7 @@
         android:textColor="#8bc34a"
         android:textSize="30sp"
         android:visibility="gone"
+        android:clickable="true"
         app:layout_constraintEnd_toStartOf="@+id/text_location2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -197,6 +199,7 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:visibility="gone"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

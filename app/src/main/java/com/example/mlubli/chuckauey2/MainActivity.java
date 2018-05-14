@@ -1,6 +1,7 @@
 package com.example.mlubli.chuckauey2;
 
 import android.Manifest;
+import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -19,6 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     String responseYN;
 
 
-    //notificationManger
+    //for the notificationManger
     private final int NOTIFICATION_ID=1;
 
     //Location Parameters
@@ -84,14 +86,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     String lattitude,longitude;
     LatLng myLatLng;
 
-    //Date and time Parameters
+    //For Date and time
     Calendar calendar;
     SimpleDateFormat simpleDateFormat;
     SimpleDateFormat simpleDateFormat2;
     String Day;
     String Time;
 
-    //map
+    //For the map
     MapView mapView;
     GoogleMap map;
 
@@ -110,15 +112,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
        // buttonL.setOnClickListener(new buttonLClickListener());
 
 
-        //     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-    //    fab.setOnClickListener(new View.OnClickListener() {
-    //        @Override
-     //       public void onClick(View view) {
-      //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-      //                  .setAction("Action", null).show();
-      //      }
-      //  });
-
+        //Buttons listeners
 
         button1 = (Button)findViewById(R.id.button4);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -152,6 +146,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 startActivity(intent);
             }
         });
+
+
+
+
 
         buttonL.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -203,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         });
 
+        //initilizing the text views
         textView = (TextView)findViewById(R.id.text_location1);
         textView2 = (TextView)findViewById(R.id.text_location2);
         textView3 = (TextView)findViewById(R.id.text_location3);
@@ -211,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         button = (Button)findViewById(R.id.button_location);
 
 
-        //Date declarations
+        //Getting Date information
         calendar = Calendar.getInstance();
         simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
         simpleDateFormat2 = new SimpleDateFormat("EEE");
@@ -222,6 +221,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         String carLon = null;
 
 
+        // checking if parking infromation is already saved or not
     if (!fileExists(this))
         start();
     else if (readFromFile(this).equals("no"))
@@ -229,8 +229,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     else
         start2(readFromFile(this));
 
-   //     else
-    //        start2(carLat, carLon);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -249,6 +248,24 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         mapView.getMapAsync(this);
 
+    }
+
+    // message to show if the resunce is YES
+    private void viewYes() {
+        Toast.makeText(this, "You may park in this location",
+                Toast.LENGTH_LONG).show() ;
+    }
+
+    // message to show parking time details
+    private void viewDuration() {
+        Toast.makeText(this, "This is a "+parkingTime+" hour(s) parking",
+                Toast.LENGTH_LONG).show();
+    }
+
+    // message to show parking payment
+    private void viewPaid() {
+        Toast.makeText(this, "This is a paid parking, look for nearby ticket machines or meter",
+                Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -308,6 +325,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }*/
 
+ // The main application start
     public void start() { 															//NEW METHOD
         Time = simpleDateFormat.format(calendar.getTime());
         Day = simpleDateFormat2.format(calendar.getTime());
@@ -338,6 +356,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    //Alternative application start if parking information is saved
     public void start2(String latandlon) { 															//NEW METHOD
         Time = simpleDateFormat.format(calendar.getTime());
         Day = simpleDateFormat2.format(calendar.getTime());
@@ -381,6 +400,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
      //updateMarker();
     }
 
+    //Method to get the location of the user and display information accordingly
     private void getLocation() {
         if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
@@ -461,6 +481,28 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                         textView3.setText(parkingType);
                                         findViewById(R.id.text_location3).setVisibility(View.VISIBLE);
                                         buttonL.setVisibility(View.VISIBLE);
+
+                                        textView.setOnClickListener(new View.OnClickListener() {
+                                            public void onClick(View v) {
+
+                                                viewYes();
+
+                                            }
+                                        });
+
+                                        textView2.setOnClickListener(new View.OnClickListener() {
+                                            public void onClick(View v) {
+
+                                                viewDuration();
+                                            }
+                                        });
+
+                                        textView3.setOnClickListener(new View.OnClickListener() {
+                                            public void onClick(View v) {
+
+                                                viewPaid();
+                                            }
+                                        });
 
                                     } else if (responseYN.equals("No restriction")) {
                                         textView.setText(Html.fromHtml("<font  color='#8bc34a'>Yes</font>"));
@@ -552,16 +594,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         m.setPosition(myLatLng);
         m.showInfoWindow();
     }
-
+// saving the location of the user by writiing to a file
     private void saveLocation() {
 
-    //    SharedPreferences settings = getApplicationContext().getSharedPreferences("SavedLocation", 0);
-    //    SharedPreferences.Editor editor = settings.edit();
-    //    editor.putString("Lat", lattitude);
-    //    editor.putString("Long",longitude);
-
-        // Apply the edits!
-    //    editor.apply();
 
         String carLatLon = lattitude+","+longitude;
 
@@ -571,7 +606,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-
+    // clearing the user location by changing the written info in the file
     private void clearLocation() {
 
     writeToFile("no", this);
@@ -580,6 +615,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    //writting to the file
     private void writeToFile(String data,Context context) {
         try {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("config.txt", Context.MODE_PRIVATE));
@@ -599,6 +635,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         return true;
     }
 
+    //reading from the file
     private String readFromFile(Context context) {
 
         String ret = "";
@@ -629,6 +666,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         return ret;
     }
 
+    //sending the notification about the parking time
     public void notification(View view,String parkAvailableTime) {
         //Drawable drawable = ContextCompat.getDrawable(this, R.drawable.lufei);
         //Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
@@ -658,7 +696,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mBuilder.setTicker("ChuckAUey Reminder");
         //priority
         mBuilder.setPriority(NotificationCompat.PRIORITY_MAX);
-        //set notification time，unit is ms，当前设置为比系统时间少一小时
+        //set notification time，unit is ms，
         mBuilder.setWhen(System.currentTimeMillis());
         //onGoing means user cannot clean it by swiping notification
         mBuilder.setOngoing(true);
@@ -667,7 +705,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mBuilder.setDefaults(NotificationCompat.DEFAULT_ALL);
 
         NotificationCompat.BigTextStyle style = new NotificationCompat.BigTextStyle();
-        style.bigText("Your parking available time is: "+ parkAvailableTime+" Hour(s)");
+        style.bigText("You can park here for: "+ parkAvailableTime+" Hour(s)");
         style.setBigContentTitle("Parking info");
         style.setSummaryText("ChuckAUey");
         mBuilder.setStyle(style);
@@ -679,8 +717,32 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         Notification notification =  mBuilder.build();
         notification.flags |= Notification.FLAG_NO_CLEAR;
         mNotificationManager.notify(NOTIFICATION_ID, notification);
+
+
+        //alarm
+        // time at which alarm will be scheduled here ,
+        // we fetch  the  time 15 minutes earlier than the target time
+        // i.e. 24*60*60*1000= 86,400,000   milliseconds in a day
+        Long endTime = Long.parseLong("5000", 10)   ;
+
+        AlarmManager am = (AlarmManager)getSystemService(ALARM_SERVICE);
+        Intent intent1 = new Intent("ELITOR_CLOCK");
+        intent1.putExtra("msg","Time to check parking");
+        PendingIntent pi = PendingIntent.getBroadcast(this,0,intent1,0);
+        // create an Intent and set the class which will execute when Alarm triggers, here we have
+        // given MyReciever in the Intent, the onRecieve() method of this class will execute when
+        // alarm triggers and
+        //we will write the code to give reminder inside onRecieve() method pf Myreciever class
+
+
+
+
+        //set the alarm for particular time
+        am.set(AlarmManager.RTC_WAKEUP,endTime, pi);
+
     }
 
+    //Alert message if the GPS is turned off
     protected void buildAlertMessageNoGps() {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -701,7 +763,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
 
-
+//Creating the main map
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
@@ -763,6 +825,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         return ret;
     }
+
+    //Map options
     @Override
     public void onResume() {
         mapView.onResume();

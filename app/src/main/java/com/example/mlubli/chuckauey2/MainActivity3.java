@@ -71,7 +71,7 @@ public class MainActivity3 extends AppCompatActivity {
         setupSpinner2();
 
 
-     //   mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        //   mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
         button1 = (Button)findViewById(R.id.button10);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -112,14 +112,14 @@ public class MainActivity3 extends AppCompatActivity {
         });
 
 
-    //    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-    //    fab.setOnClickListener(new View.OnClickListener() {
-    //        @Override
-     //       public void onClick(View view) {
-     //           Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-     //                   .setAction("Action", null).show();
-    //        }
-    //    });
+        //    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //    fab.setOnClickListener(new View.OnClickListener() {
+        //        @Override
+        //       public void onClick(View view) {
+        //           Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+        //                   .setAction("Action", null).show();
+        //        }
+        //    });
 
     }
 
@@ -140,57 +140,57 @@ public class MainActivity3 extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-            String color = "";
+                String color = "";
 
-               if (position == 1) {
-                   color = "white";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+                if (position == 1) {
+                    color = "white";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
 
-               }
-               else if (position ==2){
-                   color="yellow";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
-
-               }
-               else if (position == 3){
-                   color="red";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
-
-               }
-               else if (position ==4){
-                   color="black";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
-
-               }
-               else if (position ==5){
-                   color="green";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
-
-               }
-               else if (position ==6){
-                   color="orange";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
-
-               }
-               else if (position ==7){
-                   color="blue";
-                   findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
-
-               }
-               else if (position ==0) {
-                   color = "all";
-                   findViewById(R.id.spinner2).setVisibility(View.GONE);
-                   findViewById(R.id.button).setVisibility(View.GONE);
-               }
-
-               colorSelected = color;
-               filterByCol(color);
                 }
+                else if (position ==2){
+                    color="yellow";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+
+                }
+                else if (position == 3){
+                    color="red";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+
+                }
+                else if (position ==4){
+                    color="black";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+
+                }
+                else if (position ==5){
+                    color="green";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+
+                }
+                else if (position ==6){
+                    color="orange";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+
+                }
+                else if (position ==7){
+                    color="blue";
+                    findViewById(R.id.spinner2).setVisibility(View.VISIBLE);
+
+                }
+                else if (position ==0) {
+                    color = "all";
+                    findViewById(R.id.spinner2).setVisibility(View.GONE);
+                    findViewById(R.id.button).setVisibility(View.GONE);
+                }
+
+                colorSelected = color;
+                filterByCol(color);
+            }
 
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-             //   filterByCol("all");
+                //   filterByCol("all");
 
             }
         });
@@ -211,7 +211,7 @@ public class MainActivity3 extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-            String shape = "";
+                String shape = "";
                 if (position == 1) {
                     shape = "circle";
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
@@ -243,7 +243,7 @@ public class MainActivity3 extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-              //  filterByShape("all");
+                //  filterByShape("all");
 
             }
         });
@@ -251,26 +251,26 @@ public class MainActivity3 extends AppCompatActivity {
     }
 
     private void filterByCol(String color) {
-    ArrayList<SignItem> colList = new ArrayList<>();
-    boolean found;
-    Spinner spinner = (Spinner) findViewById(R.id.spinner2);
-    spinner.setSelection(0);
+        ArrayList<SignItem> colList = new ArrayList<>();
+        boolean found;
+        Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+        spinner.setSelection(0);
 
-    if (color.equals("all")){
-        colList = new ArrayList<>(sList);
-    }
+        if (color.equals("all")){
+            colList = new ArrayList<>(sList);
+        }
 
-else{
-    for (SignItem sign : sList){
+        else{
+            for (SignItem sign : sList){
 
 
 
-         if (sign.getsColor1().equals(color) || sign.getsColor2().equals(color))
-            colList.add(sign);
-         found = true;
+                if (sign.getsColor1().equals(color) || sign.getsColor2().equals(color))
+                    colList.add(sign);
+                found = true;
 
-    }
-    }
+            }
+        }
         fList = colList;
         mAdapter.filterList(colList);
     }
@@ -288,7 +288,7 @@ else{
 
 
 
-else {
+        else {
             for (SignItem sign : sList) {
 
 
@@ -343,9 +343,9 @@ else {
 
 
         }  catch (JSONException e) {
-        Log.e("ChuckAuey", "unexpected JSON exception", e);
+            Log.e("ChuckAuey", "unexpected JSON exception", e);
 
-    }
+        }
 
         sList.get(0).setImageResource(R.drawable.s001);
         sList.get(1).setImageResource(R.drawable.s002);

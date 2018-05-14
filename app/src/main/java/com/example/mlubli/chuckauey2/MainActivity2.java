@@ -166,6 +166,7 @@ public class MainActivity2 extends AppCompatActivity {
         return true;
     }
 
+    // the main start of the actitivty
     public void onClick(View view) {
         String latLon;
         isOn = switch1.isChecked();
@@ -434,6 +435,8 @@ public class MainActivity2 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    //converting the distence to propper value
     public String checkDist (String dist) {
 
         if (dist.charAt(0)!='0') {
@@ -459,6 +462,7 @@ public class MainActivity2 extends AppCompatActivity {
         return dist;
     }
 
+    //fixing some street names that have issues
     public String checkStreet (String street) {
 
         String[] result = street.split("\\s");
@@ -470,7 +474,7 @@ public class MainActivity2 extends AppCompatActivity {
         return street;
     }
 
-
+//getting the location information
     private String getLocation() {
         String latLon = "";
         if (ActivityCompat.checkSelfPermission(MainActivity2.this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -527,7 +531,7 @@ public class MainActivity2 extends AppCompatActivity {
         return latLon;
     }
 
-
+//Alert message if the GPS is turned off
     protected void buildAlertMessageNoGps() {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
